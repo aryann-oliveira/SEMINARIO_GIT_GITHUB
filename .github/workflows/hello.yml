@@ -1,0 +1,23 @@
+name: Hello World Python
+
+# Dispara a action sempre que houver um push no repositório
+on: [push]
+
+jobs:
+  run-hello:
+    runs-on: ubuntu-latest  # Usa uma máquina virtual Linux
+
+    steps:
+      # 1️⃣ Faz o checkout do código no repositório
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # 2️⃣ Configura o ambiente Python
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # versão desejada
+
+      # 3️⃣ Executa o script Python
+      - name: Executar script Hello World
+        run: python hello.py
