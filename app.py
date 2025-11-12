@@ -14,7 +14,7 @@ def webhook():
 
 @app.route("/", methods=["GET"])
 def home():
-    return "Servidor de Webhook Flask está rodando! 🚀"
+    return "Servidor de Webhook Flask está rodando denovo! 🚀"
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
